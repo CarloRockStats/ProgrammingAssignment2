@@ -1,9 +1,19 @@
+## Coursera Data Science Specialization
+## Johns Hopkins University
+## Course 2: R Programming
+## Week 3
+## Programming Assignment 2: Lexical Scoping
+## Author: caeparraro@unal.edu.co
+## Date: 2020-08-17
+
+
+
 ## We need to create two functions that allow us to cache the inverse of a matrix
 
 
 ## This function creates a special "matrix" object that can cache its inverse
 ## This function builds a set of functions and return the functions within a list
-## to the parent environmetn
+## to the parent environment
 
 makeCacheMatrix <- function(x = matrix()) {
     # Initialization of objects x and m_i
@@ -43,15 +53,3 @@ cacheSolve <- function(x, ...) {
     x$set_m_inverse(m_i)
     m_i
 }
-
-
-## Testing that functions works
-
-# a <- matrix(data = c(2, 7, 19, 11, 3, 5, 1, 3, 46), nrow = 3)
-# solve(a)
-# 
-# aMatrix <- makeCacheMatrix(a)
-# aMatrix$get()
-# aMatrix$get_m_inverse()
-# cacheSolve(aMatrix)
-# aMatrix$get_m_inverse()
